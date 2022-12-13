@@ -5,6 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<p th:text="${res}" />
+<h1>All:</h1>
+    <div th:each="person : ${people}">
+        <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">user</a>
+    </div>
 </body>
 </html>
